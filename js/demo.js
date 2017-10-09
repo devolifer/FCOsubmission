@@ -6,13 +6,13 @@ var hyperDial;
 
 let config = {
 	"development": true,
-	"runtimeURL": "hyperty-catalogue://hybroker.rethink.ptinovacao.pt/.well-known/runtime/Runtime",
+	"runtimeURL": "hyperty-catalogue://catalogue.hybroker.rethink.ptinovacao.pt/.well-known/runtime/Runtime",
 	"domain": "hybroker.rethink.ptinovacao.pt"
 };
 
 let runtime;
 let CatalogueURLreporter = 'hyperty-catalogue://' + config.domain + '/.well-known/hyperty/HelloWorldReporter';
-let CatalogueURLobserver = 'hyperty-catalogue://' + config.domain + '/.well-known/hyperty/HelloWorldObserver ';
+let CatalogueURLobserver = 'hyperty-catalogue://' + config.domain + '/.well-known/hyperty/HelloWorldObserver';
 
 
 
