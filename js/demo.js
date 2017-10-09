@@ -5,9 +5,9 @@ var rolemode = 0; //observer=0, reporter=1
 var hyperDial;
 
 let config = {
-	"development": true,
-	"runtimeURL": "hyperty-catalogue://catalogue.hybroker.rethink.ptinovacao.pt/.well-known/runtime/Runtime",
-	"domain": "hybroker.rethink.ptinovacao.pt"
+        "development": true,
+        "runtimeURL": "hyperty-catalogue://catalogue.hybroker.rethink.ptinovacao.pt/.well-known/runtime/Runtime",
+        "domain": "hybroker.rethink.ptinovacao.pt"
 };
 
 let runtime;
@@ -72,7 +72,8 @@ function startUsingDeployedHperty(hyperty) {
 
     		console.log('Hello event received:', event);    
     		console.log("wtf..."+event);
-    		angle = event;
+    		angle = event.hello;
+    		updateDialer();
   		});
 
   		console.log('Observer Waiting for Hello!!');
@@ -114,7 +115,7 @@ function updateDialer() {
 		'-ms-transform' : 'rotate(' + angle + 'deg)',
 		'transform' : 'rotate(' + angle + 'deg)'
 	});
-	if (rolemode == 0)
+	if (rolemode == 1)
 		hyperDial.bye(angle);
 }
 
