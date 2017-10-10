@@ -16,7 +16,7 @@ let CatalogueURLobserver = 'hyperty-catalogue://' + config.domain + '/.well-know
 
 
 
-$( "input[name='role']")[0].checked = true;
+$( "input[name='role']")[0].checked = false;
 $( "input[name='role']")[1].checked = false;
 
 $( "input[name='role']" ).click(function () {
@@ -120,6 +120,8 @@ function updateDialer() {
 }
 
 document.onkeypress = function(evt) {
+	if (rolemode == 0)
+		return;
 	evt = evt || window.event;
 	var charCode = evt.keyCode || evt.which;
 	var charStr = String.fromCharCode(charCode);
